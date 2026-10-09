@@ -1,0 +1,122 @@
+# Federico Malservigi: a personal card site. Italian here, English in site.en.yaml (same section ids).
+# Tone: plain and modest; facts, no slogans.
+name: Federico Malservigi
+description: "Studente di Informatica per il management all'Università di Bologna."
+lang: it
+translations:
+  - { lang: en, file: site.en.yaml }
+theme: { preset: lab }
+nav:
+  cta: { label: Scrivimi, href: "#contatti" }
+sections:
+  - id: inizio
+    type: scene3d
+    layout: cards
+    style: glow
+    zoom: 12
+    levels:
+      - { preset: network, params: { color: "#45f0a0", edge: "#2a6b55" } }
+      - { preset: particles, params: { color: "#45f0a0", color2: "#5fb6ff", core: "#12382c", count: 60000 } }
+      - { preset: lattice, params: { a: "#45f0a0", b: "#5fb6ff", bond: "#2a5a6b" } }
+    hud:
+      kind: scale
+      scales: [relazioni, dati, struttura]
+    steps:
+      - intro: true
+        kicker: Bologna
+        title: Federico <em>Malservigi</em>
+        body: Studente di Informatica per il management all'Università di Bologna.
+        hint: Scorri
+      - kicker: 01 · Dati
+        title: Analisi <em>dei dati</em>
+        body: "Uso Python, Pandas e SQL. Da febbraio a maggio 2026 ho fatto uno stage da data analyst in Bitbang, nel team Data Science."
+        fact: Python · Pandas · NumPy · SQL
+        length: 1.4
+      - kicker: 02 · Software
+        title: Sviluppo <em>software</em>
+        body: "Scrivo app Android in Kotlin e progetti in Java, JavaScript e PHP, spesso in gruppo con i compagni di corso."
+        fact: Kotlin · Java · JavaScript · PHP · Docker
+        length: 1.4
+
+  - id: chi-sono
+    type: product
+    nav_label: Chi sono
+    side: left
+    image: { file: inputs/montagna.webp, crop: [0.005, 0.004, 0.994, 1.0] }   # trims the screenshot's dark edges
+    frame: true
+    kicker: Chi sono
+    title: Ciao, sono <em>Federico.</em>
+    body: "Sono di Bologna e studio Informatica per il management all'Unibo. Imparo soprattutto facendo: progetti d'esame in gruppo e qualche app per conto mio. Fuori dall'università faccio scherma e Krav Maga e, quando posso, vado in montagna."
+    tags: [Italiano · madrelingua, Inglese · B2, Spagnolo · A2, Patente B]
+    buttons:
+      - { label: Scrivimi, href: "mailto:malserfede@gmail.com" }
+      - { label: LinkedIn, href: "https://www.linkedin.com/in/federico-malservigi" }
+
+  - id: percorso
+    type: timeline
+    nav_label: Percorso
+    kicker: Percorso
+    title: Studi <em>ed esperienze</em>
+    items:
+      - { when: 2018 – 2023, title: Liceo Scientifico E. Fermi, body: "Diploma di scuola secondaria superiore, a Bologna." }
+      - { when: 2023 – oggi, title: Informatica per il management, body: "Università di Bologna: programmazione, basi di dati, sistemi, statistica e gestione dei progetti." }
+      - { when: Feb – Mag 2026, title: Data analyst · Bitbang, body: "Stage nel team Data Science: analisi dei dati di vendita di un e-commerce." }
+
+  - id: progetti
+    type: product
+    nav_label: Progetti
+    side: right
+    kicker: Progetto · Android
+    title: Canone. <em>See what you hear.</em>
+    body: "Un lettore musicale per Android che analizza ogni brano sul telefono (tonalità, accordi, tempo) e lo trasforma in tre visualizzazioni animate. Catalogo su Firebase, ascolto offline, playlist e riproduzione in background."
+    video: inputs/canone.mp4
+    tags: [Kotlin, Jetpack Compose, Firebase, Media3, Analisi audio sul dispositivo]
+    buttons:
+      - { label: Codice su GitHub, href: "https://github.com/Fede046/Canone" }
+
+  - id: github
+    type: features
+    kicker: Altri progetti
+    title: Il resto è <em>su GitHub</em>
+    items:
+      - tag: Personale
+        title: Fede046
+        body: I miei progetti e gli appunti dei corsi che ho condiviso.
+        href: https://github.com/Fede046
+      - tag: Gruppo di studio
+        title: E1-Unibo
+        body: I progetti d'esame fatti in gruppo con i compagni di corso.
+        href: https://github.com/E1-Unibo
+
+  - id: competenze
+    type: features
+    nav_label: Competenze
+    kicker: Competenze
+    title: Cosa <em>uso</em>
+    items:
+      - { tag: Dati, title: Analisi, body: "Python con Pandas e NumPy, SQL, MySQL e MongoDB." }
+      - { tag: Sviluppo, title: App e web, body: "Kotlin, Java, JavaScript, HTML e CSS, PHP, GWT. API REST con OpenAPI." }
+      - { tag: Metodo, title: Strumenti, body: "Git, GitHub e GitLab, Docker, Maven. Agile e Scrum. XML, JSON e YAML." }
+
+  - id: fuori
+    type: features
+    kicker: Fuori dallo schermo
+    title: Sport, scout <em>e volontariato</em>
+    items:
+      - { tag: Dal 2017, title: Scherma e Krav Maga, body: "Scherma dal 2017, con un terzo posto al torneo regionale del 2019. Oggi anche un corso di Krav Maga tradizionale a Bologna." }
+      - { tag: 2012 – 2023, title: Scout AGESCI, body: "Nel gruppo Bologna 18 dagli 8 anni alla fine del liceo: trekking, arrampicata, bici e i servizi dell'associazione." }
+      - { tag: Volontariato, title: Caritas e AVIS, body: "Con la Caritas ho preparato e consegnato la spesa a famiglie in difficoltà. Sono donatore di sangue AVIS." }
+      - { tag: Interessi, title: Finanza personale, body: "Seguo ETF e obbligazioni e cerco di capire i numeri dietro un portafoglio." }
+
+  - id: contatti
+    type: cta
+    nav_label: Contatti
+    kicker: Contatti
+    title: Scrivimi, <em>rispondo volentieri.</em>
+    buttons:
+      - { label: malserfede@gmail.com, href: "mailto:malserfede@gmail.com" }
+      - { label: LinkedIn, href: "https://www.linkedin.com/in/federico-malservigi" }
+      - { label: Telegram, href: "https://t.me/Federico569" }
+
+footer:
+  left: © 2026 Federico Malservigi · Bologna

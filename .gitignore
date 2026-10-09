@@ -1,0 +1,5 @@
+# Build cache, local build and review output (regenerate with `studio build` / `studio snapshot`)
+.build/
+dist/
+snapshots/
+recordings/

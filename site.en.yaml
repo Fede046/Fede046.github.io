@@ -1,0 +1,71 @@
+# English copy, laid over site.yaml by section id (see Translation in engine/spec.py).
+description: "Information Science for Management student at the University of Bologna."
+nav:
+  cta: { label: Get in touch }
+sections:
+  - id: inizio
+    hud: { scales: [relations, data, structure] }
+    steps:
+      - body: Information Science for Management student at the University of Bologna.
+        hint: Scroll
+      - kicker: 01 · Data
+        title: Data <em>analysis</em>
+        body: "I use Python, Pandas and SQL. From February to May 2026 I was a data analyst intern at Bitbang, in the Data Science team."
+      - title: Software <em>development</em>
+        body: "I write Android apps in Kotlin and projects in Java, JavaScript and PHP, often in a team with fellow students."
+
+  - id: chi-sono
+    nav_label: About
+    kicker: About me
+    title: Hi, I'm <em>Federico.</em>
+    body: "I'm from Bologna and I study Information Science for Management at the University of Bologna. I learn mostly by doing: exam projects in a team and a few apps of my own. Away from university I fence, train in Krav Maga and, when I can, head to the mountains."
+    tags: [Italian · native, English · B2, Spanish · A2, Driving licence B]
+    buttons:
+      - { label: Email me }
+
+  - id: percorso
+    nav_label: Path
+    kicker: Path
+    title: Education <em>and work</em>
+    items:
+      - { body: "High school diploma (science track), in Bologna." }
+      - { when: 2023 – now, title: Information Science for Management, body: "University of Bologna: programming, databases, systems, statistics and project management." }
+      - { when: Feb – May 2026, body: "Internship in the Data Science team: analysing an e-commerce shop's sales data." }
+
+  - id: progetti
+    nav_label: Projects
+    kicker: Project · Android
+    body: "An Android music player that analyses every song on the phone (key, chords, tempo) and turns it into three animated visualisations. Catalogue on Firebase, offline listening, playlists and background playback."
+    tags: [Kotlin, Jetpack Compose, Firebase, Media3, On-device audio analysis]
+    buttons:
+      - { label: Code on GitHub }
+
+  - id: github
+    kicker: More projects
+    title: The rest is <em>on GitHub</em>
+    items:
+      - { tag: Personal, body: My projects and the course notes I have shared. }
+      - { tag: Study group, body: Exam projects built in a team with fellow students. }
+
+  - id: competenze
+    nav_label: Skills
+    kicker: Skills
+    title: What I <em>use</em>
+    items:
+      - { tag: Data, title: Analysis, body: "Python with Pandas and NumPy, SQL, MySQL and MongoDB." }
+      - { tag: Development, title: Apps and web, body: "Kotlin, Java, JavaScript, HTML and CSS, PHP, GWT. REST APIs with OpenAPI." }
+      - { tag: Method, title: Tools, body: "Git, GitHub and GitLab, Docker, Maven. Agile and Scrum. XML, JSON and YAML." }
+
+  - id: fuori
+    kicker: Away from the screen
+    title: Sport, scouting <em>and volunteering</em>
+    items:
+      - { tag: Since 2017, title: Fencing and Krav Maga, body: "Fencing since 2017, with a third place at the 2019 regional tournament. Now also a traditional Krav Maga course in Bologna." }
+      - { title: AGESCI scouts, body: "In the Bologna 18 group from age 8 to the end of high school: trekking, climbing, cycling and the association's service work." }
+      - { tag: Volunteering, body: "With Caritas I packed and delivered groceries to families in need. I'm an AVIS blood donor." }
+      - { tag: Interests, title: Personal finance, body: "I follow ETFs and bonds and try to understand the numbers behind a portfolio." }
+
+  - id: contatti
+    nav_label: Contact
+    kicker: Contact
+    title: Write to me, <em>I'm happy to reply.</em>
