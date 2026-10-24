@@ -1,0 +1,56 @@
+/* Horadric touches on the paper theme: the parchment, gold and blood red of an old codex, kept quiet enough that
+   the page still reads as a CV. Added after the theme's styles (site.yaml: css). */
+:root { --gold: #9a7b3c; --gold-ink: #7a5c22; --gold-soft: rgba(154, 123, 60, .45); }   /* gold-ink: gold dark enough for small text on the paper */
+
+/* An ornament between sections: a gold rule with a diamond in the middle. */
+.ss-block { position: relative; }
+.ss-block::before {
+  content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: min(560px, 70%); height: 14px; pointer-events: none;
+  background:
+    linear-gradient(var(--gold-soft), var(--gold-soft)) left center / calc(50% - 16px) 1px no-repeat,
+    linear-gradient(var(--gold-soft), var(--gold-soft)) right center / calc(50% - 16px) 1px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 14'%3E%3Cpath d='M12 1 18 7 12 13 6 7Z' fill='none' stroke='%239a7b3c' stroke-width='1.2'/%3E%3Cpath d='M12 4.5 14.5 7 12 9.5 9.5 7Z' fill='%238a2d1b'/%3E%3C/svg%3E") center / 24px 14px no-repeat;
+}
+#inizio::before { content: none; }   /* nothing comes before the opening */
+
+/* A drop cap on the first paragraph about me, like the first letter of a chapter. */
+#chi-sono .ss-lede::first-letter {
+  float: left; font-family: var(--font-display); font-weight: 600; font-size: 3.6em; line-height: .82;
+  color: var(--accent); padding: .08em .12em 0 0; margin-right: .06em;
+  text-shadow: 1px 1px 0 var(--gold-soft);
+}
+
+/* Kickers, card tags and timeline dates in gold. */
+.ss-kicker, .ss-tag, .ss-when { color: var(--gold-ink); }
+
+/* Cards framed like plates in a book: a gold hairline inside the border. */
+.ss-feature { box-shadow: inset 0 0 0 6px var(--bg), inset 0 0 0 7px var(--gold-soft); }
+.ss-band .ss-feature { box-shadow: inset 0 0 0 6px var(--bg-2), inset 0 0 0 7px var(--gold-soft); }
+
+/* Roots behind the whole page (tools/radici.py): one root system from the top of the hero down to the footer, laid
+   at the page's full width under everything. The first screen's roots draw themselves in on load; further down,
+   where the browser can tie an animation to scrolling, the roots are uncovered as you scroll, their growing end
+   always just below the bottom of the window. */
+body { position: relative; isolation: isolate; }
+body::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: url(inputs/radici-pagina.svg) center top / 100% auto no-repeat;
+}
+@media (max-width: 760px) { body::before { background-size: 170% auto; background-position: right top; opacity: .35; } }
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    body::before {
+      -webkit-mask-image: linear-gradient(#000 calc(100% - 180px), transparent); mask-image: linear-gradient(#000 calc(100% - 180px), transparent);
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+      animation: radici-scorri linear both; animation-timeline: scroll(root);
+    }
+  }
+}
+@keyframes radici-scorri {
+  from { -webkit-mask-size: 100% calc(100vh + 180px); mask-size: 100% calc(100vh + 180px); }
+  to { -webkit-mask-size: 100% calc(100% + 180px); mask-size: 100% calc(100% + 180px); }
+}
+
+/* The avatar ringed in gold, like a seal. */
+.ss-feature__img { border: 2px solid var(--gold); box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px var(--gold-soft); }

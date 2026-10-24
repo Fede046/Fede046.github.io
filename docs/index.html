@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" class="mode-dark layout-flow">
+<html lang="it" class="mode-light layout-flow">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -10,30 +10,30 @@
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
 :root {
-  --bg: #04070c;
-  --bg-2: #0a111b;
-  --ink: #e8f1f8;
-  --ink-rgb: 232, 241, 248;
-  --bg-rgb: 4, 7, 12;
-  --ink-2: rgba(232, 241, 248, 0.68);
-  --ink-3: rgba(232, 241, 248, 0.49);
-  --line: rgba(232, 241, 248, .13);
-  --accent: #45f0a0;
-  --accent-2: #8dffc8;
-  --accent-ink: #022514;
-  --accent-text: #45f0a0;
-  --accent-rgb: 69, 240, 160;
-  --font-display: "Sora", system-ui, sans-serif;
-  --font-body: "Sora", system-ui, sans-serif;
+  --bg: #ece4d3;
+  --bg-2: #e2d8c4;
+  --ink: #2a241f;
+  --ink-rgb: 42, 36, 31;
+  --bg-rgb: 236, 228, 211;
+  --ink-2: rgba(42, 36, 31, 0.82);
+  --ink-3: rgba(42, 36, 31, 0.68);
+  --line: rgba(42, 36, 31, .13);
+  --accent: #8a2d1b;
+  --accent-2: #a8452c;
+  --accent-ink: #fff8ef;
+  --accent-text: #8a2d1b;
+  --accent-rgb: 138, 45, 27;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Figtree", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --display-weight: 300;
-  --em-style: normal;
+  --em-style: italic;
   --radius: 999px;
-  color-scheme: dark;
+  color-scheme: light;
 }
-.ss-surface-dark { --btn-bg: #45f0a0; --btn-ink: #000000; --bg: #020305; --bg-2: #04070c; --ink: #e8f1f8; --ink-rgb: 232, 241, 248; --bg-rgb: 2, 3, 5; --ink-2: rgba(232, 241, 248, 0.68); --ink-3: rgba(232, 241, 248, 0.49); --line: rgba(232, 241, 248, .14); --accent-text: #45f0a0; --em-color: #8dffc8; color-scheme: dark; background: var(--bg); color: var(--ink); }
-.ss-surface-light { --btn-bg: #04070c; --btn-ink: #ffffff; --bg: #e8f1f8; --bg-2: #1b1e24; --ink: #04070c; --ink-rgb: 4, 7, 12; --bg-rgb: 232, 241, 248; --ink-2: rgba(4, 7, 12, 1.0); --ink-3: rgba(4, 7, 12, 1.0); --line: rgba(4, 7, 12, .14); --accent-text: #04070c; --em-color: #04070c; color-scheme: light; background: var(--bg); color: var(--ink); }
-.ss-surface-accent { --btn-bg: #45f0a0; --btn-ink: #000000; --bg: #26453b; --bg-2: #dce7ed; --ink: #e8f1f8; --ink-rgb: 232, 241, 248; --bg-rgb: 38, 69, 59; --ink-2: rgba(232, 241, 248, 1.0); --ink-3: rgba(232, 241, 248, 1.0); --line: rgba(232, 241, 248, .14); --accent-text: #e8f1f8; --em-color: #e8f1f8; color-scheme: dark; background: var(--bg); color: var(--ink); }
+.ss-surface-dark { --btn-bg: #ece4d3; --btn-ink: #000000; --bg: #2a241f; --bg-2: #3a332d; --ink: #ece4d3; --ink-rgb: 236, 228, 211; --bg-rgb: 42, 36, 31; --ink-2: rgba(236, 228, 211, 0.73); --ink-3: rgba(236, 228, 211, 0.59); --line: rgba(236, 228, 211, .14); --accent-text: #c19382; --em-color: #ece4d3; color-scheme: dark; background: var(--bg); color: var(--ink); }
+.ss-surface-light { --btn-bg: #8a2d1b; --btn-ink: #ffffff; --bg: #e2d8c4; --bg-2: #ece4d3; --ink: #2a241f; --ink-rgb: 42, 36, 31; --bg-rgb: 226, 216, 196; --ink-2: rgba(42, 36, 31, 0.82); --ink-3: rgba(42, 36, 31, 0.68); --line: rgba(42, 36, 31, .14); --accent-text: #8a2d1b; --em-color: #8a2d1b; color-scheme: light; background: var(--bg); color: var(--ink); }
+.ss-surface-accent { --btn-bg: #8a2d1b; --btn-ink: #ffffff; --bg: #cf998b; --bg-2: #342b25; --ink: #2a241f; --ink-rgb: 42, 36, 31; --bg-rgb: 207, 153, 139; --ink-2: rgba(42, 36, 31, 1.0); --ink-3: rgba(42, 36, 31, 1.0); --line: rgba(42, 36, 31, .14); --accent-text: #2a241f; --em-color: #2a241f; color-scheme: light; background: var(--bg); color: var(--ink); }
 </style>
 <link rel="stylesheet" href="runtime/studio.css">
 <style>
@@ -64,6 +64,9 @@
   /* A feature card with an href is a link: an arrow after the title, the title takes the accent on hover. */
   .ss-feature--link h3::after { content: " ↗"; font-size: .7em; color: var(--ink-3); transition: color .3s; }
   .ss-feature--link:hover h3::after { color: var(--accent); }
+  /* A card's picture (Feature.image) sits round beside its tag, like an avatar. */
+  .ss-feature__top { display: flex; align-items: center; gap: 14px; }
+  .ss-feature__img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; border: 1px solid var(--line); }
   /* A phone can play a clip instead of showing a screenshot. */
   .ss-phone__screen > video { width: 100%; height: 100%; object-fit: cover; display: block; }
   /* Poses: how a product section's phone sits (ProductBlock.pose). The panel clips at its edges (overflow: clip), so a
@@ -134,6 +137,65 @@
   .ss-h1, .ss-display { text-wrap: balance; }
 </style>
 <style>
+/* Horadric touches on the paper theme: the parchment, gold and blood red of an old codex, kept quiet enough that
+   the page still reads as a CV. Added after the theme's styles (site.yaml: css). */
+:root { --gold: #9a7b3c; --gold-ink: #7a5c22; --gold-soft: rgba(154, 123, 60, .45); }   /* gold-ink: gold dark enough for small text on the paper */
+
+/* An ornament between sections: a gold rule with a diamond in the middle. */
+.ss-block { position: relative; }
+.ss-block::before {
+  content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: min(560px, 70%); height: 14px; pointer-events: none;
+  background:
+    linear-gradient(var(--gold-soft), var(--gold-soft)) left center / calc(50% - 16px) 1px no-repeat,
+    linear-gradient(var(--gold-soft), var(--gold-soft)) right center / calc(50% - 16px) 1px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 14'%3E%3Cpath d='M12 1 18 7 12 13 6 7Z' fill='none' stroke='%239a7b3c' stroke-width='1.2'/%3E%3Cpath d='M12 4.5 14.5 7 12 9.5 9.5 7Z' fill='%238a2d1b'/%3E%3C/svg%3E") center / 24px 14px no-repeat;
+}
+#inizio::before { content: none; }   /* nothing comes before the opening */
+
+/* A drop cap on the first paragraph about me, like the first letter of a chapter. */
+#chi-sono .ss-lede::first-letter {
+  float: left; font-family: var(--font-display); font-weight: 600; font-size: 3.6em; line-height: .82;
+  color: var(--accent); padding: .08em .12em 0 0; margin-right: .06em;
+  text-shadow: 1px 1px 0 var(--gold-soft);
+}
+
+/* Kickers, card tags and timeline dates in gold. */
+.ss-kicker, .ss-tag, .ss-when { color: var(--gold-ink); }
+
+/* Cards framed like plates in a book: a gold hairline inside the border. */
+.ss-feature { box-shadow: inset 0 0 0 6px var(--bg), inset 0 0 0 7px var(--gold-soft); }
+.ss-band .ss-feature { box-shadow: inset 0 0 0 6px var(--bg-2), inset 0 0 0 7px var(--gold-soft); }
+
+/* Roots behind the whole page (tools/radici.py): one root system from the top of the hero down to the footer, laid
+   at the page's full width under everything. The first screen's roots draw themselves in on load; further down,
+   where the browser can tie an animation to scrolling, the roots are uncovered as you scroll, their growing end
+   always just below the bottom of the window. */
+body { position: relative; isolation: isolate; }
+body::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: url(assets/_media/radici-pagina.svg) center top / 100% auto no-repeat;
+}
+@media (max-width: 760px) { body::before { background-size: 170% auto; background-position: right top; opacity: .35; } }
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    body::before {
+      -webkit-mask-image: linear-gradient(#000 calc(100% - 180px), transparent); mask-image: linear-gradient(#000 calc(100% - 180px), transparent);
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+      animation: radici-scorri linear both; animation-timeline: scroll(root);
+    }
+  }
+}
+@keyframes radici-scorri {
+  from { -webkit-mask-size: 100% calc(100vh + 180px); mask-size: 100% calc(100vh + 180px); }
+  to { -webkit-mask-size: 100% calc(100% + 180px); mask-size: 100% calc(100% + 180px); }
+}
+
+/* The avatar ringed in gold, like a seal. */
+.ss-feature__img { border: 2px solid var(--gold); box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px var(--gold-soft); }
+
+</style>
+<style>
   html.ss-loading, html.ss-loading body { overflow: hidden; height: 100%; }
   .ss-loader { position: fixed; inset: 0; z-index: 1000; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
     background: var(--bg); color: var(--ink); transition: opacity .7s cubic-bezier(.22,.8,.2,1), visibility .7s; }
@@ -169,26 +231,11 @@
 </div></header>
 
 <main>
-<section class="ss-scene ss-cards ss-side-right ss-type-scene3d ss-shade-auto" id="inizio" data-scene="scene3d">
-  <div class="ss-pin ss-pin--full">
-    <div class="ss-visual"></div>
-    <div class="ss-shade"></div>
-    <div class="ss-hud ss-scalehud" aria-hidden="true">
-  <div class="ss-scalebar"><b data-scale>relazioni</b><i></i></div>
-</div>
-
+<section class="ss-block ss-hero ss-hero--left" id="inizio">    <div class="ss-hero__in">
+<span class="ss-badge">Bologna</span><h1 class="ss-h1">Federico <em>Malservigi</em></h1><p class="ss-lede">Studio Informatica per il management all&#39;Università di Bologna. Mi occupo soprattutto di dati: da febbraio a maggio 2026 ho fatto uno stage da data analyst in Bitbang, nel team Data Science, con Python, Pandas e SQL. Scrivo anche app Android in Kotlin e progetti in Java, JavaScript e PHP, spesso in gruppo con i compagni di corso.</p>    <div class="ss-btns"><a class="ss-btn ss-btn--hot" href="#contatti">Scrivimi <span class="ss-arrow">→</span></a><a class="ss-btn" href="#progetti">Progetti</a></div>
   </div>
-  <div class="ss-steps ss-steps--over">
-<article class="ss-step ss-intro" style="--h: 120vh"><div class="ss-card">
-<div class="ss-num">Bologna</div><h1 class="ss-h1">Federico <em>Malservigi</em></h1><p class="ss-body">Studente di Informatica per il management all&#39;Università di Bologna.</p><div class="ss-hint">Scorri</div></div>
-</article><article class="ss-step" style="--h: 140vh"><div class="ss-card">
-<div class="ss-num">01 · Dati</div><h2 class="ss-h2">Analisi <em>dei dati</em></h2><p class="ss-body">Uso Python, Pandas e SQL. Da febbraio a maggio 2026 ho fatto uno stage da data analyst in Bitbang, nel team Data Science.</p><div class="ss-fact">Python · Pandas · NumPy · SQL</div></div>
-</article><article class="ss-step" style="--h: 140vh"><div class="ss-card">
-<div class="ss-num">02 · Software</div><h2 class="ss-h2">Sviluppo <em>software</em></h2><p class="ss-body">Scrivo app Android in Kotlin e progetti in Java, JavaScript e PHP, spesso in gruppo con i compagni di corso.</p><div class="ss-fact">Kotlin · Java · JavaScript · PHP · Docker</div></div>
-</article>  </div>
-  <script type="application/json" class="ss-config">{"background": null, "bloom": [0.5, 0.45, 0.12], "dust": "#8fb8d8", "final": null, "levels": [{"params": {"color": "#45f0a0", "edge": "#2a6b55"}, "preset": "network"}, {"params": {"color": "#45f0a0", "color2": "#5fb6ff", "core": "#12382c", "count": 60000}, "preset": "particles"}, {"params": {"a": "#45f0a0", "b": "#5fb6ff", "bond": "#2a5a6b"}, "preset": "lattice"}], "seed": 7, "style": "glow", "zoom": 12.0}</script>
-  <script type="application/json" class="ss-section">{"hud": {"clock": null, "events": [], "fields": [], "kind": "scale", "legend": [], "scales": ["relazioni", "dati", "struttura"]}, "layout": "cards", "length": 4.0, "steps": [{"at": null, "body": "Studente di Informatica per il management all\u0027Universit\u00e0 di Bologna.", "fact": null, "hint": "Scorri", "image": null, "intro": true, "kicker": "Bologna", "length": 1.2, "state": {}, "title": "Federico \u003cem\u003eMalservigi\u003c/em\u003e"}, {"at": null, "body": "Uso Python, Pandas e SQL. Da febbraio a maggio 2026 ho fatto uno stage da data analyst in Bitbang, nel team Data Science.", "fact": "Python \u00b7 Pandas \u00b7 NumPy \u00b7 SQL", "hint": null, "image": null, "intro": false, "kicker": "01 \u00b7 Dati", "length": 1.4, "state": {}, "title": "Analisi \u003cem\u003edei dati\u003c/em\u003e"}, {"at": null, "body": "Scrivo app Android in Kotlin e progetti in Java, JavaScript e PHP, spesso in gruppo con i compagni di corso.", "fact": "Kotlin \u00b7 Java \u00b7 JavaScript \u00b7 PHP \u00b7 Docker", "hint": null, "image": null, "intro": false, "kicker": "02 \u00b7 Software", "length": 1.4, "state": {}, "title": "Sviluppo \u003cem\u003esoftware\u003c/em\u003e"}]}</script>
 </section>
+
 <section class="ss-block ss-product ss-product--left ss-pose--beside" id="chi-sono"><div class="ss-wrap ss-product__in">
   <div class="ss-product__media" data-float>
 <img class="ss-product__img ss-product__img--frame" src="assets/_media/031b7631693b.webp" alt="" loading="lazy">  </div>
@@ -215,7 +262,8 @@
 
 <section class="ss-block" id="github"><div class="ss-wrap">
 <div class="ss-head ss-reveal"><span class="ss-kicker">Altri progetti</span><h2 class="ss-display">Il resto è <em>su GitHub</em></h2></div>  <div class="ss-features ss-features--2">
-<a class="ss-feature ss-feature--link ss-reveal" href="https://github.com/Fede046"><span class="ss-tag">Personale</span>      <div><h3>Fede046</h3><p>I miei progetti e gli appunti dei corsi che ho condiviso.</p></div>
+<a class="ss-feature ss-feature--link ss-reveal" href="https://github.com/Fede046"><div class="ss-feature__top"><img class="ss-feature__img" src="assets/_media/06c94631221c.webp" alt="" loading="lazy"><span class="ss-tag">Personale</span></div>
+      <div><h3>Fede046</h3><p>I miei progetti e gli appunti dei corsi che ho condiviso. L&#39;avatar è Imperius, da Diablo III: ci sono cresciuto.</p></div>
 </a><a class="ss-feature ss-feature--link ss-reveal" href="https://github.com/E1-Unibo"><span class="ss-tag">Gruppo di studio</span>      <div><h3>E1-Unibo</h3><p>I progetti d&#39;esame fatti in gruppo con i compagni di corso.</p></div>
 </a>  </div>
 </div></section>

@@ -5,38 +5,23 @@ description: "Studente di Informatica per il management all'Università di Bolog
 lang: it
 translations:
   - { lang: en, file: site.en.yaml }
-theme: { preset: lab }
+theme:   # paper, in the colours and type of Scroll Studio's Wunderkammer example
+  preset: paper
+  colors: { bg: "#ece4d3", bg2: "#e2d8c4", accent: "#8a2d1b", accent2: "#a8452c" }
+  fonts: { display: "Cormorant Garamond", body: "Figtree" }
+css: style.css   # Horadric touches on the paper theme: a drop cap, gold ornaments, the roots behind the page
 nav:
   cta: { label: Scrivimi, href: "#contatti" }
 sections:
   - id: inizio
-    type: scene3d
-    layout: cards
-    style: glow
-    zoom: 12
-    levels:
-      - { preset: network, params: { color: "#45f0a0", edge: "#2a6b55" } }
-      - { preset: particles, params: { color: "#45f0a0", color2: "#5fb6ff", core: "#12382c", count: 60000 } }
-      - { preset: lattice, params: { a: "#45f0a0", b: "#5fb6ff", bond: "#2a5a6b" } }
-    hud:
-      kind: scale
-      scales: [relazioni, dati, struttura]
-    steps:
-      - intro: true
-        kicker: Bologna
-        title: Federico <em>Malservigi</em>
-        body: Studente di Informatica per il management all'Università di Bologna.
-        hint: Scorri
-      - kicker: 01 · Dati
-        title: Analisi <em>dei dati</em>
-        body: "Uso Python, Pandas e SQL. Da febbraio a maggio 2026 ho fatto uno stage da data analyst in Bitbang, nel team Data Science."
-        fact: Python · Pandas · NumPy · SQL
-        length: 1.4
-      - kicker: 02 · Software
-        title: Sviluppo <em>software</em>
-        body: "Scrivo app Android in Kotlin e progetti in Java, JavaScript e PHP, spesso in gruppo con i compagni di corso."
-        fact: Kotlin · Java · JavaScript · PHP · Docker
-        length: 1.4
+    type: hero   # name and one paragraph on paper; the page's roots start here (style.css, tools/radici.py)
+    align: left
+    badge: Bologna
+    title: Federico <em>Malservigi</em>
+    body: "Studio Informatica per il management all'Università di Bologna. Mi occupo soprattutto di dati: da febbraio a maggio 2026 ho fatto uno stage da data analyst in Bitbang, nel team Data Science, con Python, Pandas e SQL. Scrivo anche app Android in Kotlin e progetti in Java, JavaScript e PHP, spesso in gruppo con i compagni di corso."
+    buttons:
+      - { label: Scrivimi, href: "#contatti" }
+      - { label: Progetti, href: "#progetti" }
 
   - id: chi-sono
     type: product
@@ -80,8 +65,9 @@ sections:
     title: Il resto è <em>su GitHub</em>
     items:
       - tag: Personale
+        image: inputs/imperius-avatar.jpg   # the GitHub profile picture
         title: Fede046
-        body: I miei progetti e gli appunti dei corsi che ho condiviso.
+        body: "I miei progetti e gli appunti dei corsi che ho condiviso. L'avatar è Imperius, da Diablo III: ci sono cresciuto."
         href: https://github.com/Fede046
       - tag: Gruppo di studio
         title: E1-Unibo
