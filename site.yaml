@@ -1,104 +1,104 @@
-# Federico Malservigi: a personal card site. Italian here, English in site.en.yaml (same section ids).
+# Federico Malservigi: a personal card site. English here, Italian in site.it.yaml (same section ids).
 # Tone: plain and modest; facts, no slogans.
 name: Federico Malservigi
-description: "Studente di Informatica per il management all'Università di Bologna."
-lang: it
+description: "Information Science for Management student at the University of Bologna."
+lang: en
 translations:
-  - { lang: en, file: site.en.yaml }
+  - { lang: it, file: site.it.yaml }
 theme:   # paper, in the colours and type of Scroll Studio's Wunderkammer example
   preset: paper
   colors: { bg: "#ece4d3", bg2: "#e2d8c4", accent: "#8a2d1b", accent2: "#a8452c" }
   fonts: { display: "Cormorant Garamond", body: "Figtree" }
 css: style.css   # Horadric touches on the paper theme: a drop cap, gold ornaments, the roots behind the page
 nav:
-  cta: { label: Scrivimi, href: "#contatti" }
+  cta: { label: Get in touch, href: "#contatti" }
 sections:
   - id: inizio
     type: hero   # name and one paragraph on paper; the page's roots start here (style.css, tools/radici.py)
     align: left
     badge: Bologna
     title: Federico <em>Malservigi</em>
-    body: "Studio Informatica per il management all'Università di Bologna. Mi occupo soprattutto di dati: da febbraio a maggio 2026 ho fatto uno stage da data analyst in Bitbang, nel team Data Science, con Python, Pandas e SQL. Scrivo anche app Android in Kotlin e progetti in Java, JavaScript e PHP, spesso in gruppo con i compagni di corso."
+    body: "I study Information Science for Management at the University of Bologna. My main focus is data: from February to May 2026 I was a data analyst intern at Bitbang, in the Data Science team, working with Python, Pandas and SQL. I also write Android apps in Kotlin and projects in Java, JavaScript and PHP, often in a team with fellow students."
     buttons:
-      - { label: Scrivimi, href: "#contatti" }
-      - { label: Progetti, href: "#progetti" }
+      - { label: Email me, href: "#contatti" }
+      - { label: Projects, href: "#progetti" }
 
   - id: chi-sono
     type: product
-    nav_label: Chi sono
+    nav_label: About
     side: left
     image: { file: inputs/montagna.webp, crop: [0.005, 0.004, 0.994, 1.0] }   # trims the screenshot's dark edges
     frame: true
-    kicker: Chi sono
-    title: Ciao, sono <em>Federico.</em>
-    body: "Sono di Bologna e studio Informatica per il management all'Unibo. Imparo soprattutto facendo: progetti d'esame in gruppo e qualche app per conto mio. Fuori dall'università faccio scherma e Krav Maga e, quando posso, vado in montagna."
-    tags: [Italiano · madrelingua, Inglese · B2, Spagnolo · A2, Patente B]
+    kicker: About me
+    title: Hi, I'm <em>Federico.</em>
+    body: "I'm from Bologna and I study Information Science for Management at the University of Bologna. I learn mostly by doing: exam projects in a team and a few apps of my own. Away from university I fence, train in Krav Maga and, when I can, head to the mountains."
+    tags: [Italian · native, English · B2, Spanish · A2, Driving licence B]
     buttons:
-      - { label: Scrivimi, href: "mailto:malserfede@gmail.com" }
+      - { label: Email me, href: "mailto:malserfede@gmail.com" }
       - { label: LinkedIn, href: "https://www.linkedin.com/in/federico-malservigi" }
 
   - id: percorso
     type: timeline
-    nav_label: Percorso
-    kicker: Percorso
-    title: Studi <em>ed esperienze</em>
+    nav_label: Path
+    kicker: Path
+    title: Education <em>and work</em>
     items:
-      - { when: 2018 – 2023, title: Liceo Scientifico E. Fermi, body: "Diploma di scuola secondaria superiore, a Bologna." }
-      - { when: 2023 – oggi, title: Informatica per il management, body: "Università di Bologna: programmazione, basi di dati, sistemi, statistica e gestione dei progetti." }
-      - { when: Feb – Mag 2026, title: Data analyst · Bitbang, body: "Stage nel team Data Science: analisi dei dati di vendita di un e-commerce." }
+      - { when: 2018 – 2023, title: Liceo Scientifico E. Fermi, body: "High school diploma (science track), in Bologna." }
+      - { when: 2023 – now, title: Information Science for Management, body: "University of Bologna: programming, databases, systems, statistics and project management." }
+      - { when: Feb – May 2026, title: Data analyst · Bitbang, body: "Internship in the Data Science team: analysing an e-commerce shop's sales data." }
 
   - id: progetti
     type: product
-    nav_label: Progetti
+    nav_label: Projects
     side: right
-    kicker: Progetto · Android
+    kicker: Project · Android
     title: Canone. <em>See what you hear.</em>
-    body: "Un lettore musicale per Android che analizza ogni brano sul telefono (tonalità, accordi, tempo) e lo trasforma in tre visualizzazioni animate. Catalogo su Firebase, ascolto offline, playlist e riproduzione in background."
+    body: "An Android music player that analyses every song on the phone (key, chords, tempo) and turns it into three animated visualisations. Catalogue on Firebase, offline listening, playlists and background playback."
     video: inputs/canone.mp4
-    tags: [Kotlin, Jetpack Compose, Firebase, Media3, Analisi audio sul dispositivo]
+    tags: [Kotlin, Jetpack Compose, Firebase, Media3, On-device audio analysis]
     buttons:
-      - { label: Codice su GitHub, href: "https://github.com/Fede046/Canone" }
+      - { label: Code on GitHub, href: "https://github.com/Fede046/Canone" }
 
   - id: github
     type: features
-    kicker: Altri progetti
-    title: Il resto è <em>su GitHub</em>
+    kicker: More projects
+    title: The rest is <em>on GitHub</em>
     items:
-      - tag: Personale
+      - tag: Personal
         image: inputs/imperius-avatar.jpg   # the GitHub profile picture
         title: Fede046
-        body: "I miei progetti e gli appunti dei corsi che ho condiviso. L'avatar è Imperius, da Diablo III: ci sono cresciuto."
+        body: "My projects and the course notes I have shared. The avatar is Imperius, from Diablo III: I grew up with it."
         href: https://github.com/Fede046
-      - tag: Gruppo di studio
+      - tag: Study group
         title: E1-Unibo
-        body: I progetti d'esame fatti in gruppo con i compagni di corso.
+        body: Exam projects built in a team with fellow students.
         href: https://github.com/E1-Unibo
 
   - id: competenze
     type: features
-    nav_label: Competenze
-    kicker: Competenze
-    title: Cosa <em>uso</em>
+    nav_label: Skills
+    kicker: Skills
+    title: What I <em>use</em>
     items:
-      - { tag: Dati, title: Analisi, body: "Python con Pandas e NumPy, SQL, MySQL e MongoDB." }
-      - { tag: Sviluppo, title: App e web, body: "Kotlin, Java, JavaScript, HTML e CSS, PHP, GWT. API REST con OpenAPI." }
-      - { tag: Metodo, title: Strumenti, body: "Git, GitHub e GitLab, Docker, Maven. Agile e Scrum. XML, JSON e YAML." }
+      - { tag: Data, title: Analysis, body: "Python with Pandas and NumPy, SQL, MySQL and MongoDB." }
+      - { tag: Development, title: Apps and web, body: "Kotlin, Java, JavaScript, HTML and CSS, PHP, GWT. REST APIs with OpenAPI." }
+      - { tag: Method, title: Tools, body: "Git, GitHub and GitLab, Docker, Maven. Agile and Scrum. XML, JSON and YAML." }
 
   - id: fuori
     type: features
-    kicker: Fuori dallo schermo
-    title: Sport, scout <em>e volontariato</em>
+    kicker: Away from the screen
+    title: Sport, scouting <em>and volunteering</em>
     items:
-      - { tag: Dal 2017, title: Scherma e Krav Maga, body: "Scherma dal 2017, con un terzo posto al torneo regionale del 2019. Oggi anche un corso di Krav Maga tradizionale a Bologna." }
-      - { tag: 2012 – 2023, title: Scout AGESCI, body: "Nel gruppo Bologna 18 dagli 8 anni alla fine del liceo: trekking, arrampicata, bici e i servizi dell'associazione." }
-      - { tag: Volontariato, title: Caritas e AVIS, body: "Con la Caritas ho preparato e consegnato la spesa a famiglie in difficoltà. Sono donatore di sangue AVIS." }
-      - { tag: Interessi, title: Finanza personale, body: "Seguo ETF e obbligazioni e cerco di capire i numeri dietro un portafoglio." }
+      - { tag: Since 2017, title: Fencing and Krav Maga, body: "Fencing since 2017, with a third place at the 2019 regional tournament. Now also a traditional Krav Maga course in Bologna." }
+      - { tag: 2012 – 2023, title: AGESCI scouts, body: "In the Bologna 18 group from age 8 to the end of high school: trekking, climbing, cycling and the association's service work." }
+      - { tag: Volunteering, title: Caritas and AVIS, body: "With Caritas I packed and delivered groceries to families in need. I'm an AVIS blood donor." }
+      - { tag: Interests, title: Personal finance, body: "I follow ETFs and bonds and try to understand the numbers behind a portfolio." }
 
   - id: contatti
     type: cta
-    nav_label: Contatti
-    kicker: Contatti
-    title: Scrivimi, <em>rispondo volentieri.</em>
+    nav_label: Contact
+    kicker: Contact
+    title: Write to me, <em>I'm happy to reply.</em>
     buttons:
       - { label: malserfede@gmail.com, href: "mailto:malserfede@gmail.com" }
       - { label: LinkedIn, href: "https://www.linkedin.com/in/federico-malservigi" }

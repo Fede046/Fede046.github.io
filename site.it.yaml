@@ -1,0 +1,66 @@
+# Italian copy, laid over site.yaml by section id (see Translation in engine/spec.py).
+description: "Studente di Informatica per il management all'Università di Bologna."
+nav:
+  cta: { label: Scrivimi }
+sections:
+  - id: inizio
+    body: "Studio Informatica per il management all'Università di Bologna. Mi occupo soprattutto di dati: da febbraio a maggio 2026 ho fatto uno stage da data analyst in Bitbang, nel team Data Science, con Python, Pandas e SQL. Scrivo anche app Android in Kotlin e progetti in Java, JavaScript e PHP, spesso in gruppo con i compagni di corso."
+    buttons:
+      - { label: Scrivimi }
+      - { label: Progetti }
+
+  - id: chi-sono
+    nav_label: Chi sono
+    kicker: Chi sono
+    title: Ciao, sono <em>Federico.</em>
+    body: "Sono di Bologna e studio Informatica per il management all'Unibo. Imparo soprattutto facendo: progetti d'esame in gruppo e qualche app per conto mio. Fuori dall'università faccio scherma e Krav Maga e, quando posso, vado in montagna."
+    tags: [Italiano · madrelingua, Inglese · B2, Spagnolo · A2, Patente B]
+    buttons:
+      - { label: Scrivimi }
+
+  - id: percorso
+    nav_label: Percorso
+    kicker: Percorso
+    title: Studi <em>ed esperienze</em>
+    items:
+      - { body: "Diploma di scuola secondaria superiore, a Bologna." }
+      - { when: 2023 – oggi, title: Informatica per il management, body: "Università di Bologna: programmazione, basi di dati, sistemi, statistica e gestione dei progetti." }
+      - { when: Feb – Mag 2026, body: "Stage nel team Data Science: analisi dei dati di vendita di un e-commerce." }
+
+  - id: progetti
+    nav_label: Progetti
+    kicker: Progetto · Android
+    body: "Un lettore musicale per Android che analizza ogni brano sul telefono (tonalità, accordi, tempo) e lo trasforma in tre visualizzazioni animate. Catalogo su Firebase, ascolto offline, playlist e riproduzione in background."
+    tags: [Kotlin, Jetpack Compose, Firebase, Media3, Analisi audio sul dispositivo]
+    buttons:
+      - { label: Codice su GitHub }
+
+  - id: github
+    kicker: Altri progetti
+    title: Il resto è <em>su GitHub</em>
+    items:
+      - { tag: Personale, body: "I miei progetti e gli appunti dei corsi che ho condiviso. L'avatar è Imperius, da Diablo III: ci sono cresciuto." }
+      - { tag: Gruppo di studio, body: I progetti d'esame fatti in gruppo con i compagni di corso. }
+
+  - id: competenze
+    nav_label: Competenze
+    kicker: Competenze
+    title: Cosa <em>uso</em>
+    items:
+      - { tag: Dati, title: Analisi, body: "Python con Pandas e NumPy, SQL, MySQL e MongoDB." }
+      - { tag: Sviluppo, title: App e web, body: "Kotlin, Java, JavaScript, HTML e CSS, PHP, GWT. API REST con OpenAPI." }
+      - { tag: Metodo, title: Strumenti, body: "Git, GitHub e GitLab, Docker, Maven. Agile e Scrum. XML, JSON e YAML." }
+
+  - id: fuori
+    kicker: Fuori dallo schermo
+    title: Sport, scout <em>e volontariato</em>
+    items:
+      - { tag: Dal 2017, title: Scherma e Krav Maga, body: "Scherma dal 2017, con un terzo posto al torneo regionale del 2019. Oggi anche un corso di Krav Maga tradizionale a Bologna." }
+      - { title: Scout AGESCI, body: "Nel gruppo Bologna 18 dagli 8 anni alla fine del liceo: trekking, arrampicata, bici e i servizi dell'associazione." }
+      - { tag: Volontariato, title: Caritas e AVIS, body: "Con la Caritas ho preparato e consegnato la spesa a famiglie in difficoltà. Sono donatore di sangue AVIS." }
+      - { tag: Interessi, title: Finanza personale, body: "Seguo ETF e obbligazioni e cerco di capire i numeri dietro un portafoglio." }
+
+  - id: contatti
+    nav_label: Contatti
+    kicker: Contatti
+    title: Scrivimi, <em>rispondo volentieri.</em>

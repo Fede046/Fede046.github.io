@@ -2,8 +2,10 @@
 
 Il mio sito personale: https://fede046.github.io
 
-- `site.yaml`: il sito in italiano; `site.en.yaml`: i testi in inglese.
-- `inputs/`: foto e video.
+- `site.yaml`: il sito in inglese (la pagina principale); `site.it.yaml`: i testi in italiano (`it.html`).
+- `style.css`: i tocchi aggiunti al tema (ornamenti, capolettera, le radici dietro la pagina).
+- `tools/radici.py`: genera le radici, `inputs/radici-pagina.svg` (`python tools/radici.py`).
+- `inputs/`: foto, video e radici.
 - `docs/`: il sito pubblicato, servito da GitHub Pages (branch `main`, cartella `/docs`).
 
 Il sito è costruito con [Scroll Studio](https://github.com/Okohedeki/scroll-studio) (licenza MIT, il cui
