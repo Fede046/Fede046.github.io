@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Federico Malservigi</title>
 <meta name="description" content="Projects by Federico Malservigi: Daycast and Canone."><meta name="generator" content="Scroll Studio">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%238a2d1b%22/%3E%3Ctext%20x%3D%2216%22%20y%3D%2222.5%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%20fill%3D%22%23fff8ef%22%3EF%3C/text%3E%3C/svg%3E">
 <link rel="alternate" hreflang="en" href="projects.html">
 <link rel="alternate" hreflang="it" href="projects.it.html">
 <link rel="stylesheet" href="fonts/fonts.css">
@@ -44,30 +45,19 @@
   /* A type scene set as a display line (size: display) rather than a passage: bigger, centred, balanced. */
   .ss-scene.ss-type--display .ss-type__text { font-size: clamp(46px, 8.2vw, 150px); text-align: center; letter-spacing: -.04em; line-height: 1; max-width: 12em; }
   /* On a dark surface the rolling word takes the surface's <em> colour, which is checked for contrast; the raw accent is not. */
-  .ss-surface-dark .ss-type--swap .roll { color: var(--em-color); }
-  /* The language switch (Site.translations) sits before the nav button and stays visible on phones. */
+  .ss-surface-dark .ss-type--swap .roll { color: var(--em-color); }  /* The language switch (Site.translations) sits before the nav button and stays visible on phones. */
   .ss-nav__end { display: flex; align-items: center; gap: 16px; }
   .ss-lang { display: flex; gap: 2px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; }
   .ss-lang a { padding: 6px 8px; border-radius: 6px; color: var(--ink-3); transition: color .2s, background .2s; }
   .ss-lang a:hover { color: var(--ink); }
-  .ss-lang a[aria-current] { color: var(--ink); background: rgba(var(--ink-rgb), .09); }
-  /* A product panel can play a clip (ProductBlock.video) in a rounded frame instead of showing a shot. */
+  .ss-lang a[aria-current] { color: var(--ink); background: rgba(var(--ink-rgb), .09); }  /* A product panel can play a clip (ProductBlock.video) in a rounded frame instead of showing a shot. */
   .ss-product__clip { display: block; width: 100%; height: auto; max-height: 68vh; object-fit: cover; border-radius: 18px; background: #000;
     border: 1px solid var(--line); box-shadow: 0 50px 100px -50px rgba(0, 0, 0, .7); transform: translateY(calc(var(--float, 0) * -36px)); }
-  @media (max-width: 900px) { .ss-product__clip { max-height: 52vh; } }
-  /* ...and show a photograph whole in the same frame (ProductBlock.frame): the box follows the photo's own shape. */
+  @media (max-width: 900px) { .ss-product__clip { max-height: 52vh; } }  /* ...and show a photograph whole in the same frame (ProductBlock.frame): the box follows the photo's own shape. */
   .ss-product__img--frame { width: auto; max-width: 100%; height: auto; -webkit-mask: none; mask: none; mix-blend-mode: normal;
-    border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 50px 100px -50px rgba(0, 0, 0, .7); }
-  /* A CTA with several buttons centres them in one row. */
+    border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 50px 100px -50px rgba(0, 0, 0, .7); }  /* A CTA with several buttons centres them in one row. */
   .ss-cta .ss-btns { justify-content: center; margin-top: 44px; }
-  .ss-cta .ss-btns .ss-btn { margin-top: 0; }
-  /* A feature card with an href is a link: an arrow after the title, the title takes the accent on hover. */
-  .ss-feature--link h3::after { content: " ↗"; font-size: .7em; color: var(--ink-3); transition: color .3s; }
-  .ss-feature--link:hover h3::after { color: var(--accent); }
-  /* A card's picture (Feature.image) sits round beside its tag, like an avatar. */
-  .ss-feature__top { display: flex; align-items: center; gap: 14px; }
-  .ss-feature__img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; border: 1px solid var(--line); }
-  /* A phone can play a clip instead of showing a screenshot. */
+  .ss-cta .ss-btns .ss-btn { margin-top: 0; }  /* A phone can play a clip instead of showing a screenshot. */
   .ss-phone__screen > video { width: 100%; height: 100%; object-fit: cover; display: block; }
   /* Poses: how a product section's phone sits (ProductBlock.pose). The panel clips at its edges (overflow: clip), so a
      phone pushed past them is cut off there. Each pose is a different composition, so a run of product panels reads
@@ -228,7 +218,7 @@ body:not([data-page="home"])::before { background-image: url(assets/_media/radic
     <span>Federico Malservigi</span>
   </a>
   <nav class="ss-nav__links"><a href="index.html#chi-sono">About</a><a href="index.html#percorso">Path</a><a href="projects.html">Projects</a><a href="index.html#competenze">Skills</a><a href="index.html#contatti">Contact</a></nav>
-  <div class="ss-nav__end">
+<div class="ss-nav__end">
 <nav class="ss-lang" aria-label="Language"><a href="projects.html" hreflang="en" lang="en" aria-current="page">EN</a><a href="projects.it.html" hreflang="it" lang="it">IT</a></nav><a class="ss-btn" href="index.html#contatti">Get in touch <span class="ss-arrow">→</span></a>  </div>
 </div></header>
 
@@ -241,7 +231,7 @@ body:not([data-page="home"])::before { background-image: url(assets/_media/radic
 
 <section class="ss-block ss-product ss-product--right ss-pose--beside" id="daycast"><div class="ss-wrap ss-product__in">
   <div class="ss-product__media" data-float>
-<img class="ss-product__img ss-product__img--frame" src="assets/_media/ae39779d6273.webp" alt="" loading="lazy">  </div>
+<img class="ss-product__img ss-product__img--frame" src="assets/_media/6a6b7a6198b9.webp" alt="" loading="lazy">  </div>
   <div class="ss-product__copy ss-reveal">
 <span class="ss-kicker">Project · Windows</span>    <h2 class="ss-h2">Daycast. <em>A weather forecast for your PC time.</em></h2>
 <p class="ss-lede">Daycast predicts how long you&#39;ll use the PC today, hour by hour, and which apps and sites you&#39;ll open, with a range of uncertainty. A light logger records apps and site domains in the background; the forecast comes from Mistral AI&#39;s Timestral model when, tested on the past week, it beats a simple baseline. Everything stays on the PC.</p><ul class="ss-pills"><li>Python</li><li>PyTorch</li><li>Timestral</li><li>SQLite</li><li>pywebview</li><li>Windows UI Automation</li></ul>    <div class="ss-btns"><a class="ss-btn ss-btn--hot" href="https://github.com/Fede046/Daycast/releases/latest">Download <span class="ss-arrow">→</span></a><a class="ss-btn" href="https://github.com/Fede046/Daycast">Code on GitHub</a></div>
