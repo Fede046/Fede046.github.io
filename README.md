@@ -3,8 +3,10 @@
 Il mio sito personale: https://fede046.github.io
 
 - `site.yaml`: il sito in inglese (la pagina principale); `site.it.yaml`: i testi in italiano (`it.html`).
+- `projects.yaml` / `projects.it.yaml`: la pagina dei progetti (`projects.html`, `projects.it.html`). Le schermate
+  di Daycast in `inputs/daycast/` sono della sua modalità `--demo`: dati di esempio.
 - `style.css`: i tocchi aggiunti al tema (ornamenti, capolettera, le radici dietro la pagina).
-- `tools/radici.py`: genera le radici, `inputs/radici-pagina.svg` (`python tools/radici.py`).
+- `tools/radici.py`: genera le radici, `inputs/radici-pagina.svg` per la home e `radici-margini.svg` per le altre pagine.
 - `inputs/`: foto, video e radici.
 - `docs/`: il sito pubblicato, servito da GitHub Pages (branch `main`, cartella `/docs`).
 

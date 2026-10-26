@@ -176,6 +176,8 @@ body::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: url(assets/_media/radici-pagina.svg) center top / 100% auto no-repeat;
 }
+/* The other pages open with copy on both sides, so they get the margins' roots alone, with no hero roots across them. */
+body:not([data-page="home"])::before { background-image: url(assets/_media/radici-margini.svg); }
 @media (max-width: 760px) { body::before { background-size: 170% auto; background-position: right top; opacity: .35; } }
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: scroll()) {
@@ -214,7 +216,7 @@ body::before {
   setTimeout(function () { document.documentElement.classList.remove("ss-loading"); }, 50000.0);
 </script>
 </head>
-<body>
+<body data-page="home">
 <div class="ss-loader" id="ss-loader" role="status" aria-live="polite">
   <div class="ss-loader__name">Federico Malservigi</div>
   <div class="ss-loader__bar"><i></i></div>
@@ -225,7 +227,7 @@ body::before {
   <a class="ss-wordmark" href="#">
     <span>Federico Malservigi</span>
   </a>
-  <nav class="ss-nav__links"><a href="#chi-sono">About</a><a href="#percorso">Path</a><a href="#progetti">Projects</a><a href="#competenze">Skills</a><a href="#contatti">Contact</a></nav>
+  <nav class="ss-nav__links"><a href="#chi-sono">About</a><a href="#percorso">Path</a><a href="projects.html">Projects</a><a href="#competenze">Skills</a><a href="#contatti">Contact</a></nav>
   <div class="ss-nav__end">
 <nav class="ss-lang" aria-label="Language"><a href="index.html" hreflang="en" lang="en" aria-current="page">EN</a><a href="it.html" hreflang="it" lang="it">IT</a></nav><a class="ss-btn" href="#contatti">Get in touch <span class="ss-arrow">→</span></a>  </div>
 </div></header>
@@ -250,14 +252,11 @@ body::before {
 <div class="ss-tl ss-reveal"><span class="ss-when">2018 – 2023</span><h4>Liceo Scientifico E. Fermi</h4><p>High school diploma (science track), in Bologna.</p></div><div class="ss-tl ss-reveal"><span class="ss-when">2023 – now</span><h4>Information Science for Management</h4><p>University of Bologna: programming, databases, systems, statistics and project management.</p></div><div class="ss-tl ss-reveal"><span class="ss-when">Feb – May 2026</span><h4>Data analyst · Bitbang</h4><p>Internship in the Data Science team: analysing an e-commerce shop&#39;s sales data.</p></div>  </div>
 </div></section>
 
-<section class="ss-block ss-product ss-product--right ss-pose--beside" id="progetti"><div class="ss-wrap ss-product__in">
-  <div class="ss-product__media" data-float>
-<video class="ss-product__clip" src="assets/_media/9ae014fb12c3.mp4" autoplay muted loop playsinline preload="metadata"></video>
-  </div>
-  <div class="ss-product__copy ss-reveal">
-<span class="ss-kicker">Project · Android</span>    <h2 class="ss-h2">Canone. <em>See what you hear.</em></h2>
-<p class="ss-lede">An Android music player that analyses every song on the phone (key, chords, tempo) and turns it into three animated visualisations. Catalogue on Firebase, offline listening, playlists and background playback.</p><ul class="ss-pills"><li>Kotlin</li><li>Jetpack Compose</li><li>Firebase</li><li>Media3</li><li>On-device audio analysis</li></ul>    <div class="ss-btns"><a class="ss-btn ss-btn--hot" href="https://github.com/Fede046/Canone">Code on GitHub <span class="ss-arrow">→</span></a></div>
-  </div>
+<section class="ss-block" id="progetti"><div class="ss-wrap">
+<div class="ss-head ss-reveal"><span class="ss-kicker">Projects</span><h2 class="ss-display">What I&#39;ve <em>built</em></h2></div>  <div class="ss-features ss-features--2">
+<a class="ss-feature ss-feature--link ss-reveal" href="projects.html#daycast"><span class="ss-tag">Windows · Python</span>      <div><h3>Daycast</h3><p>A weather forecast for your PC time: how long you&#39;ll use it today, hour by hour, and which apps you&#39;ll open.</p></div>
+</a><a class="ss-feature ss-feature--link ss-reveal" href="projects.html#canone"><span class="ss-tag">Android · Kotlin</span>      <div><h3>Canone</h3><p>A music player that analyses every song on the phone and turns it into animated visualisations.</p></div>
+</a>  </div>
 </div></section>
 
 <section class="ss-block" id="github"><div class="ss-wrap">

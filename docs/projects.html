@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en" class="mode-light layout-flow">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Federico Malservigi</title>
+<meta name="description" content="Projects by Federico Malservigi: Daycast and Canone."><meta name="generator" content="Scroll Studio">
+<link rel="alternate" hreflang="en" href="projects.html">
+<link rel="alternate" hreflang="it" href="projects.it.html">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root {
+  --bg: #ece4d3;
+  --bg-2: #e2d8c4;
+  --ink: #2a241f;
+  --ink-rgb: 42, 36, 31;
+  --bg-rgb: 236, 228, 211;
+  --ink-2: rgba(42, 36, 31, 0.82);
+  --ink-3: rgba(42, 36, 31, 0.68);
+  --line: rgba(42, 36, 31, .13);
+  --accent: #8a2d1b;
+  --accent-2: #a8452c;
+  --accent-ink: #fff8ef;
+  --accent-text: #8a2d1b;
+  --accent-rgb: 138, 45, 27;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --display-weight: 300;
+  --em-style: italic;
+  --radius: 999px;
+  color-scheme: light;
+}
+.ss-surface-dark { --btn-bg: #ece4d3; --btn-ink: #000000; --bg: #2a241f; --bg-2: #3a332d; --ink: #ece4d3; --ink-rgb: 236, 228, 211; --bg-rgb: 42, 36, 31; --ink-2: rgba(236, 228, 211, 0.73); --ink-3: rgba(236, 228, 211, 0.59); --line: rgba(236, 228, 211, .14); --accent-text: #c19382; --em-color: #ece4d3; color-scheme: dark; background: var(--bg); color: var(--ink); }
+.ss-surface-light { --btn-bg: #8a2d1b; --btn-ink: #ffffff; --bg: #e2d8c4; --bg-2: #ece4d3; --ink: #2a241f; --ink-rgb: 42, 36, 31; --bg-rgb: 226, 216, 196; --ink-2: rgba(42, 36, 31, 0.82); --ink-3: rgba(42, 36, 31, 0.68); --line: rgba(42, 36, 31, .14); --accent-text: #8a2d1b; --em-color: #8a2d1b; color-scheme: light; background: var(--bg); color: var(--ink); }
+.ss-surface-accent { --btn-bg: #8a2d1b; --btn-ink: #ffffff; --bg: #cf998b; --bg-2: #342b25; --ink: #2a241f; --ink-rgb: 42, 36, 31; --bg-rgb: 207, 153, 139; --ink-2: rgba(42, 36, 31, 1.0); --ink-3: rgba(42, 36, 31, 1.0); --line: rgba(42, 36, 31, .14); --accent-text: #2a241f; --em-color: #2a241f; color-scheme: light; background: var(--bg); color: var(--ink); }
+</style>
+<link rel="stylesheet" href="runtime/studio.css">
+<style>
+  /* A section's backdrop: the image fills the panel (or a wrapper in the flow layout); the section itself goes clear,
+     whatever surface it has. */
+  .ss-backdrop { background-size: cover; background-position: center; }
+  .ss-backdrop > section, .ss-backdrop > section[class*=ss-surface-], .ss-backdrop .ss-stage, .ss-backdrop .ss-band { background: transparent; }
+  /* A type scene set as a display line (size: display) rather than a passage: bigger, centred, balanced. */
+  .ss-scene.ss-type--display .ss-type__text { font-size: clamp(46px, 8.2vw, 150px); text-align: center; letter-spacing: -.04em; line-height: 1; max-width: 12em; }
+  /* On a dark surface the rolling word takes the surface's <em> colour, which is checked for contrast; the raw accent is not. */
+  .ss-surface-dark .ss-type--swap .roll { color: var(--em-color); }
+  /* The language switch (Site.translations) sits before the nav button and stays visible on phones. */
+  .ss-nav__end { display: flex; align-items: center; gap: 16px; }
+  .ss-lang { display: flex; gap: 2px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; }
+  .ss-lang a { padding: 6px 8px; border-radius: 6px; color: var(--ink-3); transition: color .2s, background .2s; }
+  .ss-lang a:hover { color: var(--ink); }
+  .ss-lang a[aria-current] { color: var(--ink); background: rgba(var(--ink-rgb), .09); }
+  /* A product panel can play a clip (ProductBlock.video) in a rounded frame instead of showing a shot. */
+  .ss-product__clip { display: block; width: 100%; height: auto; max-height: 68vh; object-fit: cover; border-radius: 18px; background: #000;
+    border: 1px solid var(--line); box-shadow: 0 50px 100px -50px rgba(0, 0, 0, .7); transform: translateY(calc(var(--float, 0) * -36px)); }
+  @media (max-width: 900px) { .ss-product__clip { max-height: 52vh; } }
+  /* ...and show a photograph whole in the same frame (ProductBlock.frame): the box follows the photo's own shape. */
+  .ss-product__img--frame { width: auto; max-width: 100%; height: auto; -webkit-mask: none; mask: none; mix-blend-mode: normal;
+    border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 50px 100px -50px rgba(0, 0, 0, .7); }
+  /* A CTA with several buttons centres them in one row. */
+  .ss-cta .ss-btns { justify-content: center; margin-top: 44px; }
+  .ss-cta .ss-btns .ss-btn { margin-top: 0; }
+  /* A feature card with an href is a link: an arrow after the title, the title takes the accent on hover. */
+  .ss-feature--link h3::after { content: " ↗"; font-size: .7em; color: var(--ink-3); transition: color .3s; }
+  .ss-feature--link:hover h3::after { color: var(--accent); }
+  /* A card's picture (Feature.image) sits round beside its tag, like an avatar. */
+  .ss-feature__top { display: flex; align-items: center; gap: 14px; }
+  .ss-feature__img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; border: 1px solid var(--line); }
+  /* A phone can play a clip instead of showing a screenshot. */
+  .ss-phone__screen > video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* Poses: how a product section's phone sits (ProductBlock.pose). The panel clips at its edges (overflow: clip), so a
+     phone pushed past them is cut off there. Each pose is a different composition, so a run of product panels reads
+     as different screens rather than one screen seven times. */
+  .ss-pose--rise.ss-product { align-items: flex-start; padding-top: clamp(100px, 13vh, 130px); padding-bottom: 0; }
+  .ss-pose--rise .ss-product__in { grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 0; }
+  .ss-pose--rise .ss-product__copy { order: 1; max-width: 820px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .ss-pose--rise .ss-lede { max-width: 58ch; }
+  .ss-pose--rise .ss-pills, .ss-pose--rise .ss-btns { justify-content: center; }
+  .ss-pose--rise .ss-product__media { order: 2; width: 100%; min-height: 0; height: max(30svh, 290px); margin-top: 28px; place-items: start center; }
+  .ss-pose--rise .ss-phone { position: absolute; top: 0; left: 50%; width: clamp(230px, 21vw, 330px); transform: translate(-50%, calc(var(--float, 0) * -22px)); }
+  .ss-pose--close .ss-product__media { min-height: 0; height: min(62svh, 640px); place-items: start center; }
+  .ss-pose--close .ss-phone { position: absolute; top: 0; left: 50%; width: clamp(300px, 30vw, 440px); transform: translate(-50%, calc(var(--float, 0) * -26px)); }
+  .ss-pose--lean .ss-product__media { min-height: 0; height: min(60svh, 620px); }
+  .ss-pose--lean .ss-phone { position: absolute; bottom: calc(-1 * clamp(90px, 14vh, 160px) - 30%); width: clamp(260px, 24vw, 360px); transform-origin: 50% 100%; }
+  .ss-pose--lean.ss-product--left .ss-phone { left: calc(-1 * var(--gutter) - 2%); transform: rotate(9deg) translateY(calc(var(--float, 0) * -20px)); }
+  .ss-pose--lean.ss-product--right .ss-phone { right: calc(-1 * var(--gutter) - 2%); transform: rotate(-9deg) translateY(calc(var(--float, 0) * -20px)); }
+  .ss-pose--turn .ss-product__media { perspective: 1400px; }
+  .ss-pose--turn .ss-phone { width: clamp(220px, 21vw, 310px); }
+  .ss-pose--turn.ss-product--left .ss-phone { transform: rotateY(-16deg) rotateX(4deg) rotateZ(-3deg) translateY(calc(var(--float, 0) * -24px)); box-shadow: 34px 60px 90px -30px rgba(0, 0, 0, .5), inset 0 0 0 2px #2c2c2c; }
+  .ss-pose--turn.ss-product--right .ss-phone { transform: rotateY(16deg) rotateX(4deg) rotateZ(3deg) translateY(calc(var(--float, 0) * -24px)); box-shadow: -34px 60px 90px -30px rgba(0, 0, 0, .5), inset 0 0 0 2px #2c2c2c; }
+  /* pair: the two phones swap places on a loop, each playing its own clip, the one coming forward lifting over the one
+     going back. Without motion they hold the front and back positions. */
+  .ss-pose--pair .ss-product__media { min-height: min(70vh, 720px); }
+  .ss-pose--pair .ss-product__media > .ss-phone, .ss-pose--pair .ss-phone-behind { position: absolute; left: 50%; top: 50%; animation: 16s cubic-bezier(.45, 0, .25, 1) infinite; }
+  .ss-pose--pair .ss-product__media > .ss-phone { z-index: 2; transform: translate(-64%, -50%); animation-name: ss-pair-a; }
+  .ss-pose--pair .ss-phone-behind { z-index: 1; transform: translate(-22%, -56%) rotate(9deg) scale(.9); animation-name: ss-pair-b; }
+  @keyframes ss-pair-a {
+    0%, 42% { transform: translate(-64%, -50%) rotate(0deg) scale(1); z-index: 2; }
+    46% { transform: translate(-43%, -40%) rotate(4deg) scale(.94); }
+    50%, 92% { transform: translate(-22%, -56%) rotate(9deg) scale(.9); z-index: 1; }
+    96% { transform: translate(-43%, -66%) rotate(4deg) scale(.96); }
+    100% { transform: translate(-64%, -50%) rotate(0deg) scale(1); z-index: 2; }
+  }
+  @keyframes ss-pair-b {
+    0%, 42% { transform: translate(-22%, -56%) rotate(9deg) scale(.9); z-index: 1; }
+    46% { transform: translate(-43%, -66%) rotate(4deg) scale(.96); }
+    50%, 92% { transform: translate(-64%, -50%) rotate(0deg) scale(1); z-index: 2; }
+    96% { transform: translate(-43%, -40%) rotate(4deg) scale(.94); }
+    100% { transform: translate(-22%, -56%) rotate(9deg) scale(.9); z-index: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) { .ss-pose--pair .ss-product__media > .ss-phone, .ss-pose--pair .ss-phone-behind { animation: none; } }
+  .ss-product__stats { display: flex; flex-wrap: wrap; gap: 18px 44px; margin: 30px 0 10px; }
+  /* A hero can hold the app too: the phone rises from the bottom edge under the copy and sinks as the hero is left. */
+  .ss-hero--device { flex-direction: column; justify-content: flex-start; padding-top: clamp(110px, 14vh, 150px); padding-bottom: 0; gap: clamp(24px, 4vh, 44px); }
+  .ss-hero--device .ss-hero__in { flex: none; }
+  .ss-hero__phone { position: relative; width: 100%; height: max(26svh, 230px); flex: none; }
+  .ss-hero__phone .ss-phone { position: absolute; top: 0; left: 50%; width: clamp(230px, 22vw, 340px); transform: translate(-50%, calc(var(--hero-p, 0) * 40px)); }
+  .ss-product__stats .ss-v { font-size: clamp(40px, 4.2vw, 72px); }
+  .ss-product__stats .ss-l { margin-top: 4px; }
+  @media (max-width: 900px) {
+    .ss-pose--rise.ss-product { padding-top: 100px; }
+    .ss-pose--rise .ss-product__media { height: max(34svh, 250px); }
+    .ss-pose--rise .ss-phone { width: min(64vw, 300px); }
+    .ss-pose--close .ss-product__media, .ss-pose--lean .ss-product__media { order: 2; height: 44svh; }
+    .ss-pose--close .ss-phone { width: min(76vw, 340px); }
+    .ss-pose--lean .ss-phone { width: min(66vw, 320px); }
+    .ss-pose--lean.ss-product--left .ss-phone, .ss-pose--lean.ss-product--right .ss-phone { top: 24px; bottom: auto; left: 50%; right: auto; transform: translateX(-50%) rotate(-7deg); transform-origin: 50% 0; }
+    .ss-pose--pair .ss-product__media { min-height: 0; height: clamp(420px, 66svh, 600px); }
+    .ss-pose--pair .ss-product__media > .ss-phone, .ss-pose--pair .ss-phone-behind .ss-phone { width: min(50vw, 230px); }
+    .ss-pose--turn .ss-phone { width: min(60vw, 280px); }
+    .ss-product__stats { gap: 12px 28px; }
+    .ss-hero--device { padding-top: 100px; gap: 22px; }
+    .ss-hero__phone { height: max(22svh, 190px); }
+    .ss-hero__phone .ss-phone { width: min(60vw, 280px); }
+  }
+  .ss-h1, .ss-display { text-wrap: balance; }
+</style>
+<style>
+/* Horadric touches on the paper theme: the parchment, gold and blood red of an old codex, kept quiet enough that
+   the page still reads as a CV. Added after the theme's styles (site.yaml: css). */
+:root { --gold: #9a7b3c; --gold-ink: #7a5c22; --gold-soft: rgba(154, 123, 60, .45); }   /* gold-ink: gold dark enough for small text on the paper */
+
+/* An ornament between sections: a gold rule with a diamond in the middle. */
+.ss-block { position: relative; }
+.ss-block::before {
+  content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: min(560px, 70%); height: 14px; pointer-events: none;
+  background:
+    linear-gradient(var(--gold-soft), var(--gold-soft)) left center / calc(50% - 16px) 1px no-repeat,
+    linear-gradient(var(--gold-soft), var(--gold-soft)) right center / calc(50% - 16px) 1px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 14'%3E%3Cpath d='M12 1 18 7 12 13 6 7Z' fill='none' stroke='%239a7b3c' stroke-width='1.2'/%3E%3Cpath d='M12 4.5 14.5 7 12 9.5 9.5 7Z' fill='%238a2d1b'/%3E%3C/svg%3E") center / 24px 14px no-repeat;
+}
+#inizio::before { content: none; }   /* nothing comes before the opening */
+
+/* A drop cap on the first paragraph about me, like the first letter of a chapter. */
+#chi-sono .ss-lede::first-letter {
+  float: left; font-family: var(--font-display); font-weight: 600; font-size: 3.6em; line-height: .82;
+  color: var(--accent); padding: .08em .12em 0 0; margin-right: .06em;
+  text-shadow: 1px 1px 0 var(--gold-soft);
+}
+
+/* Kickers, card tags and timeline dates in gold. */
+.ss-kicker, .ss-tag, .ss-when { color: var(--gold-ink); }
+
+/* Cards framed like plates in a book: a gold hairline inside the border. */
+.ss-feature { box-shadow: inset 0 0 0 6px var(--bg), inset 0 0 0 7px var(--gold-soft); }
+.ss-band .ss-feature { box-shadow: inset 0 0 0 6px var(--bg-2), inset 0 0 0 7px var(--gold-soft); }
+
+/* Roots behind the whole page (tools/radici.py): one root system from the top of the hero down to the footer, laid
+   at the page's full width under everything. The first screen's roots draw themselves in on load; further down,
+   where the browser can tie an animation to scrolling, the roots are uncovered as you scroll, their growing end
+   always just below the bottom of the window. */
+body { position: relative; isolation: isolate; }
+body::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: url(assets/_media/radici-pagina.svg) center top / 100% auto no-repeat;
+}
+/* The other pages open with copy on both sides, so they get the margins' roots alone, with no hero roots across them. */
+body:not([data-page="home"])::before { background-image: url(assets/_media/radici-margini.svg); }
+@media (max-width: 760px) { body::before { background-size: 170% auto; background-position: right top; opacity: .35; } }
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    body::before {
+      -webkit-mask-image: linear-gradient(#000 calc(100% - 180px), transparent); mask-image: linear-gradient(#000 calc(100% - 180px), transparent);
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+      animation: radici-scorri linear both; animation-timeline: scroll(root);
+    }
+  }
+}
+@keyframes radici-scorri {
+  from { -webkit-mask-size: 100% calc(100vh + 180px); mask-size: 100% calc(100vh + 180px); }
+  to { -webkit-mask-size: 100% calc(100% + 180px); mask-size: 100% calc(100% + 180px); }
+}
+
+/* The avatar ringed in gold, like a seal. */
+.ss-feature__img { border: 2px solid var(--gold); box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px var(--gold-soft); }
+
+</style>
+<style>
+  html.ss-loading, html.ss-loading body { overflow: hidden; height: 100%; }
+  .ss-loader { position: fixed; inset: 0; z-index: 1000; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+    background: var(--bg); color: var(--ink); transition: opacity .7s cubic-bezier(.22,.8,.2,1), visibility .7s; }
+  html.ss-loading .ss-loader, .ss-loader.ss-leaving { display: flex; }
+  .ss-loader.ss-leaving { opacity: 0; visibility: hidden; }
+  .ss-loader__name { font-family: var(--font-display); font-weight: var(--display-weight); font-size: clamp(28px, 3.4vw, 46px); letter-spacing: -.02em; }
+  .ss-loader__bar { width: min(320px, 60vw); height: 2px; background: var(--line); position: relative; overflow: hidden; }
+  .ss-loader__bar i { position: absolute; inset: 0; background: var(--accent); transform-origin: left; transform: scaleX(0); transition: transform .3s; }
+  .ss-loader__pct { font-family: var(--font-mono); font-size: 12px; letter-spacing: .2em; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+</style>
+<script>
+  // Lock scrolling from the very first paint; the runtime unlocks it once every scene is ready.
+  // If the runtime can't run at all, open the page anyway after max_wait seconds.
+  document.documentElement.classList.add("ss-loading");
+  window.__ssLoader = { maxWait: 45.0, minTime: 0.6 };
+  setTimeout(function () { document.documentElement.classList.remove("ss-loading"); }, 50000.0);
+</script>
+</head>
+<body data-page="projects">
+<div class="ss-loader" id="ss-loader" role="status" aria-live="polite">
+  <div class="ss-loader__name">Federico Malservigi</div>
+  <div class="ss-loader__bar"><i></i></div>
+  <div class="ss-loader__pct"><span>0</span>%</div>
+</div>
+
+<header class="ss-nav" id="ss-nav"><div class="ss-nav__in">
+  <a class="ss-wordmark" href="index.html">
+    <span>Federico Malservigi</span>
+  </a>
+  <nav class="ss-nav__links"><a href="index.html#chi-sono">About</a><a href="index.html#percorso">Path</a><a href="projects.html">Projects</a><a href="index.html#competenze">Skills</a><a href="index.html#contatti">Contact</a></nav>
+  <div class="ss-nav__end">
+<nav class="ss-lang" aria-label="Language"><a href="projects.html" hreflang="en" lang="en" aria-current="page">EN</a><a href="projects.it.html" hreflang="it" lang="it">IT</a></nav><a class="ss-btn" href="index.html#contatti">Get in touch <span class="ss-arrow">→</span></a>  </div>
+</div></header>
+
+<main>
+<section class="ss-block" id="intro"><div class="ss-wrap ss-intro2">
+  <h2 class="ss-display ss-reveal">Things I&#39;ve <em>built</em></h2>
+  <div class="ss-reveal">
+<span class="ss-kicker">Projects</span><p class="ss-lede">Apps I wrote on my own, from the first idea to a release. The rest, including exam projects in a team, is on GitHub.</p>  </div>
+</div></section>
+
+<section class="ss-block ss-product ss-product--right ss-pose--beside" id="daycast"><div class="ss-wrap ss-product__in">
+  <div class="ss-product__media" data-float>
+<img class="ss-product__img ss-product__img--frame" src="assets/_media/ae39779d6273.webp" alt="" loading="lazy">  </div>
+  <div class="ss-product__copy ss-reveal">
+<span class="ss-kicker">Project · Windows</span>    <h2 class="ss-h2">Daycast. <em>A weather forecast for your PC time.</em></h2>
+<p class="ss-lede">Daycast predicts how long you&#39;ll use the PC today, hour by hour, and which apps and sites you&#39;ll open, with a range of uncertainty. A light logger records apps and site domains in the background; the forecast comes from Mistral AI&#39;s Timestral model when, tested on the past week, it beats a simple baseline. Everything stays on the PC.</p><ul class="ss-pills"><li>Python</li><li>PyTorch</li><li>Timestral</li><li>SQLite</li><li>pywebview</li><li>Windows UI Automation</li></ul>    <div class="ss-btns"><a class="ss-btn ss-btn--hot" href="https://github.com/Fede046/Daycast/releases/latest">Download <span class="ss-arrow">→</span></a><a class="ss-btn" href="https://github.com/Fede046/Daycast">Code on GitHub</a></div>
+  </div>
+</div></section>
+
+<section class="ss-block ss-product ss-product--left ss-pose--beside" id="canone"><div class="ss-wrap ss-product__in">
+  <div class="ss-product__media" data-float>
+<video class="ss-product__clip" src="assets/_media/9ae014fb12c3.mp4" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+  <div class="ss-product__copy ss-reveal">
+<span class="ss-kicker">Project · Android</span>    <h2 class="ss-h2">Canone. <em>See what you hear.</em></h2>
+<p class="ss-lede">An Android music player that analyses every song on the phone (key, chords, tempo) and turns it into three animated visualisations. Catalogue on Firebase, offline listening, playlists and background playback.</p><ul class="ss-pills"><li>Kotlin</li><li>Jetpack Compose</li><li>Firebase</li><li>Media3</li><li>On-device audio analysis</li></ul>    <div class="ss-btns"><a class="ss-btn ss-btn--hot" href="https://github.com/Fede046/Canone">Code on GitHub <span class="ss-arrow">→</span></a></div>
+  </div>
+</div></section>
+
+<section class="ss-block ss-cta" id="altro">
+  <div class="ss-cta__in">
+<span class="ss-kicker ss-reveal">More</span>    <h2 class="ss-display ss-reveal">The rest is <em>on GitHub.</em></h2>
+<div class="ss-reveal"><div class="ss-btns"><a class="ss-btn ss-btn--hot" href="https://github.com/Fede046">github.com/Fede046 <span class="ss-arrow">→</span></a><a class="ss-btn" href="index.html#contatti">Get in touch</a></div></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ss-footer"><div class="ss-wrap ss-footer__in">
+  <span>© 2026 Federico Malservigi · Bologna</span>
+  <span></span>
+</div></footer>
+
+<script>window.__ssScroll = { speed: 1.0 };</script>
+<script type="module" src="runtime/index.js"></script>
+<script>
+  // Clips in phones play while their panel is on screen and rest while it isn't: browsers may hold a muted
+  // autoplay until the element is seen, and a stack of looping videos is wasted work off screen.
+  (function () {
+    var clips = document.querySelectorAll(".ss-phone__screen > video");
+    if (!clips.length || !("IntersectionObserver" in window)) return;
+    function play(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    function inView(v) { var r = v.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; }
+    var io = new IntersectionObserver(function (entries) {
+      if (document.hidden) return;   // a hidden page reports nothing as visible; leave the clips as they are
+      entries.forEach(function (e) { if (e.isIntersecting) play(e.target); else e.target.pause(); });
+    }, { threshold: 0.05 });
+    clips.forEach(function (v) { io.observe(v); });
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) clips.forEach(function (v) { if (inView(v)) play(v); });
+    });
+  })();
+</script>
+</body>
+</html>

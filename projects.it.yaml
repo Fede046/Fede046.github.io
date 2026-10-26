@@ -1,0 +1,30 @@
+# Italian copy of the projects page, laid over projects.yaml by section id.
+description: "I progetti di Federico Malservigi: Daycast e Canone."
+sections:
+  - id: intro
+    kicker: Progetti
+    title: Cose che ho <em>costruito</em>
+    body: "App che ho scritto da solo, dalla prima idea a una release. Il resto, compresi i progetti d'esame in gruppo, è su GitHub."
+
+  - id: daycast
+    image: { file: inputs/daycast/it-oggi.png }
+    kicker: Progetto · Windows
+    title: Daycast. <em>Il meteo del tuo tempo al PC.</em>
+    body: "Daycast prevede quanto userai il PC oggi, ora per ora, e quali app e siti aprirai, con un intervallo di incertezza. Un logger leggero registra in background le app e i domini dei siti; la previsione arriva dal modello Timestral di Mistral AI quando, provato sulla settimana passata, sbaglia meno di una previsione base. Tutto resta sul PC."
+    buttons:
+      - { label: Scarica }
+      - { label: Codice su GitHub }
+
+  - id: canone
+    kicker: Progetto · Android
+    body: "Un lettore musicale per Android che analizza ogni brano sul telefono (tonalità, accordi, tempo) e lo trasforma in tre visualizzazioni animate. Catalogo su Firebase, ascolto offline, playlist e riproduzione in background."
+    tags: [Kotlin, Jetpack Compose, Firebase, Media3, Analisi audio sul dispositivo]
+    buttons:
+      - { label: Codice su GitHub }
+
+  - id: altro
+    kicker: Altro
+    title: Il resto è <em>su GitHub.</em>
+    buttons:
+      - { label: github.com/Fede046 }
+      - { label: Scrivimi, href: "it.html#contatti" }

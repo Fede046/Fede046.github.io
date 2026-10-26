@@ -2,6 +2,8 @@
 description: "Studente di Informatica per il management all'Università di Bologna."
 nav:
   cta: { label: Scrivimi }
+views:
+  - { nav_label: Progetti }
 sections:
   - id: inizio
     body: "Studio Informatica per il management all'Università di Bologna. Mi occupo soprattutto di dati: da febbraio a maggio 2026 ho fatto uno stage da data analyst in Bitbang, nel team Data Science, con Python, Pandas e SQL. Scrivo anche app Android in Kotlin e progetti in Java, JavaScript e PHP, spesso in gruppo con i compagni di corso."
@@ -28,12 +30,11 @@ sections:
       - { when: Feb – Mag 2026, body: "Stage nel team Data Science: analisi dei dati di vendita di un e-commerce." }
 
   - id: progetti
-    nav_label: Progetti
-    kicker: Progetto · Android
-    body: "Un lettore musicale per Android che analizza ogni brano sul telefono (tonalità, accordi, tempo) e lo trasforma in tre visualizzazioni animate. Catalogo su Firebase, ascolto offline, playlist e riproduzione in background."
-    tags: [Kotlin, Jetpack Compose, Firebase, Media3, Analisi audio sul dispositivo]
-    buttons:
-      - { label: Codice su GitHub }
+    kicker: Progetti
+    title: Cosa ho <em>costruito</em>
+    items:
+      - { body: "Il meteo del tuo tempo al PC: quanto lo userai oggi, ora per ora, e quali app aprirai.", href: "projects.it.html#daycast" }
+      - { body: "Un lettore musicale che analizza ogni brano sul telefono e lo trasforma in visualizzazioni animate.", href: "projects.it.html#canone" }
 
   - id: github
     kicker: Altri progetti

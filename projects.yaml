@@ -1,0 +1,41 @@
+# The projects page (projects.html): one panel per project, in the home page's theme, nav and footer.
+# Italian in projects.it.yaml (same section ids). Daycast's screenshots are its --demo mode: sample data, not mine.
+description: "Projects by Federico Malservigi: Daycast and Canone."
+sections:
+  - id: intro
+    type: intro
+    kicker: Projects
+    title: Things I've <em>built</em>
+    body: "Apps I wrote on my own, from the first idea to a release. The rest, including exam projects in a team, is on GitHub."
+
+  - id: daycast
+    type: product
+    side: right
+    image: { file: inputs/daycast/en-oggi.png }
+    frame: true
+    kicker: Project · Windows
+    title: Daycast. <em>A weather forecast for your PC time.</em>
+    body: "Daycast predicts how long you'll use the PC today, hour by hour, and which apps and sites you'll open, with a range of uncertainty. A light logger records apps and site domains in the background; the forecast comes from Mistral AI's Timestral model when, tested on the past week, it beats a simple baseline. Everything stays on the PC."
+    tags: [Python, PyTorch, Timestral, SQLite, pywebview, Windows UI Automation]
+    buttons:
+      - { label: Download, href: "https://github.com/Fede046/Daycast/releases/latest" }
+      - { label: Code on GitHub, href: "https://github.com/Fede046/Daycast" }
+
+  - id: canone
+    type: product
+    side: left
+    kicker: Project · Android
+    title: Canone. <em>See what you hear.</em>
+    body: "An Android music player that analyses every song on the phone (key, chords, tempo) and turns it into three animated visualisations. Catalogue on Firebase, offline listening, playlists and background playback."
+    video: inputs/canone.mp4
+    tags: [Kotlin, Jetpack Compose, Firebase, Media3, On-device audio analysis]
+    buttons:
+      - { label: Code on GitHub, href: "https://github.com/Fede046/Canone" }
+
+  - id: altro
+    type: cta
+    kicker: More
+    title: The rest is <em>on GitHub.</em>
+    buttons:
+      - { label: github.com/Fede046, href: "https://github.com/Fede046" }
+      - { label: Get in touch, href: "index.html#contatti" }

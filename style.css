@@ -37,6 +37,8 @@ body::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: url(inputs/radici-pagina.svg) center top / 100% auto no-repeat;
 }
+/* The other pages open with copy on both sides, so they get the margins' roots alone, with no hero roots across them. */
+body:not([data-page="home"])::before { background-image: url(inputs/radici-margini.svg); }
 @media (max-width: 760px) { body::before { background-size: 170% auto; background-position: right top; opacity: .35; } }
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: scroll()) {

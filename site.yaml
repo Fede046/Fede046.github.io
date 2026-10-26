@@ -5,6 +5,8 @@ description: "Information Science for Management student at the University of Bo
 lang: en
 translations:
   - { lang: it, file: site.it.yaml }
+views:   # more pages beside this one, in the same theme
+  - { slug: projects, file: projects.yaml, nav_label: Projects, nav_after: percorso, translations: { it: projects.it.yaml } }
 theme:   # paper, in the colours and type of Scroll Studio's Wunderkammer example
   preset: paper
   colors: { bg: "#ece4d3", bg2: "#e2d8c4", accent: "#8a2d1b", accent2: "#a8452c" }
@@ -47,17 +49,13 @@ sections:
       - { when: 2023 – now, title: Information Science for Management, body: "University of Bologna: programming, databases, systems, statistics and project management." }
       - { when: Feb – May 2026, title: Data analyst · Bitbang, body: "Internship in the Data Science team: analysing an e-commerce shop's sales data." }
 
-  - id: progetti
-    type: product
-    nav_label: Projects
-    side: right
-    kicker: Project · Android
-    title: Canone. <em>See what you hear.</em>
-    body: "An Android music player that analyses every song on the phone (key, chords, tempo) and turns it into three animated visualisations. Catalogue on Firebase, offline listening, playlists and background playback."
-    video: inputs/canone.mp4
-    tags: [Kotlin, Jetpack Compose, Firebase, Media3, On-device audio analysis]
-    buttons:
-      - { label: Code on GitHub, href: "https://github.com/Fede046/Canone" }
+  - id: progetti   # one card per project; each opens its panel on the projects page
+    type: features
+    kicker: Projects
+    title: What I've <em>built</em>
+    items:
+      - { tag: Windows · Python, title: Daycast, body: "A weather forecast for your PC time: how long you'll use it today, hour by hour, and which apps you'll open.", href: "projects.html#daycast" }
+      - { tag: Android · Kotlin, title: Canone, body: "A music player that analyses every song on the phone and turns it into animated visualisations.", href: "projects.html#canone" }
 
   - id: github
     type: features
