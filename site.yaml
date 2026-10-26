@@ -63,7 +63,7 @@ sections:
     title: The rest is <em>on GitHub</em>
     items:
       - tag: Personal
-        image: inputs/imperius-avatar.jpg   # the GitHub profile picture
+        avatar: inputs/imperius-avatar.jpg   # the GitHub profile picture
         title: Fede046
         body: "My projects and the course notes I have shared. The avatar is Imperius, from Diablo III: I grew up with it."
         href: https://github.com/Fede046
